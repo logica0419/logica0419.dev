@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "lint": "biome lint --write .",
+    "lint": "biome lint --write src",
     "format": "biome check --linter-enabled=false --write . && prettier --write src",
     "dev": "astro check && astro dev",
     "build": "astro check && astro build",
