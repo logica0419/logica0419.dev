@@ -3,14 +3,15 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "lint": "biome lint --write src",
-    "format": "biome format --write src && prettier --write src",
+    "lint": "biome lint --write .",
+    "format": "biome check --linter-enabled=false --write . && prettier --write src",
     "dev": "astro check && astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.5.0",
     "@astrojs/sitemap": "^3.3.0",
     "astro": "^5.7.2"
   },
@@ -20,6 +21,7 @@
     "@types/bun": "^1.2.9",
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "wrangler": "^4.11.1"
   }
 }
