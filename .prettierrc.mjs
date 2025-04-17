@@ -13,4 +13,5 @@ const config = {
   ],
 };
 
+// biome-ignore lint/style/noDefaultExport:
 export default config;
