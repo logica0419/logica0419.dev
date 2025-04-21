@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import localFont from "next/font/local";
-import type { ReactNode } from "react";
 
-export const metadata: Metadata = {
+export const rootMetadata: Metadata = {
   metadataBase: new URL("https://logica0419.dev"),
   title: {
     default: "logica / Takuto Nagami",
@@ -26,29 +23,3 @@ export const metadata: Metadata = {
     siteName: "logica / Takuto Nagami",
   },
 };
-
-const bizter = localFont({
-  src: [
-    {
-      path: "./BIZTER-Regular.ttf",
-      weight: "400",
-    },
-    {
-      path: "./BIZTER-Bold.ttf",
-      weight: "700",
-    },
-  ],
-});
-
-const RootLayout = ({
-  children,
-}: Readonly<{
-  children: ReactNode;
-}>) => {
-  return (
-    <html lang="en">
-      <body className={`${bizter.className} font-sans`}>{children}</body>
-    </html>
-  );
-};
-export default RootLayout;
