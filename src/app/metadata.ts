@@ -9,7 +9,6 @@ export const rootMetadata: Metadata = {
   description:
     "Website of logica / Takuto Nagami. Software Engineer | Singer | Composer | Designer",
   alternates: {
-    canonical: "https://logica0419.dev",
     languages: {
       en: "https://logica0419.dev/en",
       ja: "https://logica0419.dev/ja",
