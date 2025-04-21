@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import localFont from "next/font/local";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
@@ -26,6 +27,19 @@ export const metadata: Metadata = {
   },
 };
 
+const bizter = localFont({
+  src: [
+    {
+      path: "./BIZTER-Regular.ttf",
+      weight: "400",
+    },
+    {
+      path: "./BIZTER-Bold.ttf",
+      weight: "700",
+    },
+  ],
+});
+
 const RootLayout = ({
   children,
 }: Readonly<{
@@ -33,7 +47,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className="font-[BIZTER, sans-serif]">{children}</body>
+      <body className={`${bizter.className} font-sans`}>{children}</body>
     </html>
   );
 };
