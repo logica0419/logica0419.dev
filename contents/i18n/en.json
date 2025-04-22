@@ -1,3 +1,10 @@
 {
-  "index": {}
+  "index": {
+    "現在の言語": "Current Language",
+    "さあ、編集して始めましょう。": "Get started by editing <code>src/app/page.tsx</code>.",
+    "保存するだけで、すぐに変更を確認できます。": "Save and see your changes instantly.",
+    "学ぶ": "Learn",
+    "実装例を見る": "Examples",
+    "nextjs_orgへ": "Go to nextjs.org →"
+  }
 }
