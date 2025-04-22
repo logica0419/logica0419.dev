@@ -5,6 +5,11 @@ import { useEffect } from "react";
 
 const Page = () => {
   useEffect(rootLangRedirect, []);
-  return <></>;
+
+  return (
+    <html lang="ja">
+      <body suppressHydrationWarning={true} />
+    </html>
+  );
 };
 export default Page;
