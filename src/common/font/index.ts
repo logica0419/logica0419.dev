@@ -23,15 +23,5 @@ export const cica = localFont({
       path: "./Cica-Bold.ttf",
       weight: "700",
     },
-    {
-      path: "./Cica-RegularItalic.ttf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "./Cica-BoldItalic.ttf",
-      weight: "700",
-      style: "italic",
-    },
   ],
 });
