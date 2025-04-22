@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import withExportImages from "next-export-optimize-images";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
@@ -6,5 +7,4 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ["localhost", "127.0.0.1"],
 };
 
-const withNextIntl = createNextIntlPlugin();
-export default withNextIntl(nextConfig);
+export default withExportImages(createNextIntlPlugin()(nextConfig));
