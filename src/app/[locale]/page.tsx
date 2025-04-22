@@ -18,8 +18,8 @@ const Page = async ({
         <Image
           src={icon}
           alt="logica icon"
-          width={150}
-          height={150}
+          width={128}
+          height={128}
           priority={true}
         />
         <h1 className="font-bold">{t("永見 拓人 (logica)")}</h1>
