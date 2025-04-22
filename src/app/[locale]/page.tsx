@@ -1,12 +1,15 @@
-import { generateStaticParams } from "@/common/i18n";
+import { generateStaticParams } from "@/i18n/utils";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 
 export { generateStaticParams };
 
 const Page = async ({
   params,
-}: Readonly<{ params: Promise<{ lang: string }> }>) => {
-  const { lang } = await params;
+}: Readonly<{ params: Promise<{ locale: string }> }>) => {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("index");
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
@@ -20,7 +23,7 @@ const Page = async ({
           priority={true}
         />
         <p>
-          Current Language: <b>{lang}</b>
+          Current Language: <b>{locale}</b>
         </p>
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
