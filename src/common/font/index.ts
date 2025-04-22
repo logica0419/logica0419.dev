@@ -11,6 +11,8 @@ export const bizter = localFont({
       weight: "700",
     },
   ],
+  display: "swap",
+  preload: false,
 });
 
 export const cica = localFont({
@@ -24,4 +26,6 @@ export const cica = localFont({
       weight: "700",
     },
   ],
+  display: "swap",
+  preload: false,
 });
