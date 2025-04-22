@@ -14,13 +14,10 @@ export const generateStaticParams = (): { lang: string }[] =>
 const detector = languageDetector({
   fallbackLng: i18nConfig.defaultLang,
   supportedLngs: i18nConfig.langs,
+  order: ["navigator"],
 });
 
 export const rootLangRedirect = () => {
   const detectedLng = detector.detect();
-  if (detectedLng && detector.cache) {
-    detector.cache(detectedLng);
-  }
-
   redirect(`/${detectedLng}`);
 };
