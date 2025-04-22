@@ -1,6 +1,6 @@
 import "@/app/globals.css";
 import { bizter } from "@/common/font";
-import { generateStaticParams } from "@/i18n/utils";
+import { generateStaticParams } from "@/i18n";
 import type { ReactNode } from "react";
 
 export { generateStaticParams };

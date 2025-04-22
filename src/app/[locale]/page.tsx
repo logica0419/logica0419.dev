@@ -1,4 +1,5 @@
-import { generateStaticParams } from "@/i18n/utils";
+import { cica } from "@/common/font";
+import { generateStaticParams } from "@/i18n";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 
