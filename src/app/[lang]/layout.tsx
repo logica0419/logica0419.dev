@@ -14,7 +14,12 @@ const Layout = async ({
 
   return (
     <html lang={lang}>
-      <body className={`${bizter.className} font-sans`}>{children}</body>
+      <body
+        className={`${bizter.className} font-sans`}
+        suppressHydrationWarning={true}
+      >
+        {children}
+      </body>
     </html>
   );
 };
