@@ -6,10 +6,6 @@ export const bizter = localFont({
       path: "./BIZTER-Regular.ttf",
       weight: "400",
     },
-    {
-      path: "./BIZTER-Bold.ttf",
-      weight: "700",
-    },
   ],
   display: "swap",
   preload: false,
@@ -20,10 +16,6 @@ export const cica = localFont({
     {
       path: "./Cica-Regular.ttf",
       weight: "400",
-    },
-    {
-      path: "./Cica-Bold.ttf",
-      weight: "700",
     },
   ],
   display: "swap",
