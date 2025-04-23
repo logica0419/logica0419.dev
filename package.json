@@ -7,7 +7,10 @@
     "format": "biome check --linter-enabled=false --write .",
     "dev": "next dev --turbopack",
     "build": "next build",
-    "postbuild": "next-sitemap && next-export-optimize-images",
+    "postbuild": "bunx concurrently bun:postbuild:sitemap bun:postbuild:images bun:postbuild:optimize",
+    "postbuild:sitemap": "next-sitemap",
+    "postbuild:images": "next-export-optimize-images",
+    "postbuild:optimize": "find -wholename './out/*.html' | xargs sed -i s/'rel=\"preload\" as=\"script\"'/'rel=\"script\"'/",
     "start": "serve out"
   },
   "devDependencies": {
