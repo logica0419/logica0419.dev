@@ -42,3 +42,6 @@ next-env.d.ts
 
 # VS Code settings
 .vscode/
+
+# generated files
+generated.json
