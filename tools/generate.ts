@@ -4,11 +4,11 @@ import { readdirSync, writeFileSync } from "node:fs";
 import { parse } from "node:path";
 import { generateStaticParams as i18nGenerateStaticParams } from "@/i18n";
 
-const getFilesNameInDirectory = (dir: string): string[] => {
+const getDirectoriesNameInDirectory = (dir: string): string[] => {
   const entries = readdirSync(dir, { withFileTypes: true });
 
   return entries
-    .filter((dirent) => dirent.isFile())
+    .filter((dirent) => dirent.isDirectory())
     .map((dirent) => parse(dirent.name).name);
 };
 
@@ -18,12 +18,14 @@ const generateMarkDownLists = () => {
 
   const i18nParams = i18nGenerateStaticParams();
   for (const { locale } of i18nParams) {
-    const files = getFilesNameInDirectory(`./contents/articles/${locale}`);
+    const dirNames = getDirectoriesNameInDirectory(
+      `./contents/articles/${locale}`,
+    );
 
-    for (const file of files) {
-      params.push({ locale, id: file });
+    for (const dir of dirNames) {
+      params.push({ locale, id: dir });
     }
-    articleList.push({ locale, id: files });
+    articleList.push({ locale, id: dirNames });
   }
 
   writeFileSync(
@@ -36,4 +38,7 @@ const generateMarkDownLists = () => {
   );
 };
 
-generateMarkDownLists();
+const main = () => {
+  generateMarkDownLists();
+};
+main();
