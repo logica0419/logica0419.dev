@@ -13,10 +13,15 @@ const Page = async ({
   setRequestLocale(locale);
   // const t = await getTranslations("index");
 
-  const { default: Article } = await import(
-    `@/../contents/articles/${locale}/${id}.md`
+  const { default: Article, frontmatter } = await import(
+    `@/../contents/articles/${locale}/${id}/article.md`
   );
 
-  return <Article />;
+  return (
+    <div>
+      {frontmatter.title}
+      <Article />
+    </div>
+  );
 };
 export default Page;
