@@ -1,0 +1,77 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  mod:
+    name: Module Download
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set Mod Cache
+        id: mod-cache
+        uses: actions/cache@v4.2.3
+        with:
+          path: ./node_modules
+          key: mod-${{ hashFiles('**/bun.lock') }}
+      - name: Setup Bun
+        if: steps.mod-cache.outputs.cache-hit != 'true'
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Module Download
+        if: steps.mod-cache.outputs.cache-hit != 'true'
+        run: bun install
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    needs: [mod]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set Mod Cache
+        uses: actions/cache@v4.2.3
+        with:
+          path: ./node_modules
+          key: mod-${{ hashFiles('**/bun.lock') }}
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Lint
+        run: bun run lint
+      - name: Format
+        run: bun run format
+      - name: Check Diffs
+        run: git status | grep -q "nothing to commit, working tree clean"
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    needs: [mod]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set Mod Cache
+        uses: actions/cache@v4.2.3
+        with:
+          path: ./node_modules
+          key: mod-${{ hashFiles('**/bun.lock') }}
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Build
+        run: bun run build
