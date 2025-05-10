@@ -38,16 +38,6 @@
           }
         }
       }
-    },
-    {
-      "include": ["**/page.tsx", "**/layout.tsx"],
-      "linter": {
-        "rules": {
-          "style": {
-            "noDefaultExport": "off"
-          }
-        }
-      }
     }
   ]
 }
