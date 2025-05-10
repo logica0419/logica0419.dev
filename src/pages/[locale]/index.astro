@@ -1,0 +1,15 @@
+---
+import Welcome from "@/components/welcome.astro";
+import Layout from "@/layouts/layout.astro";
+import { getStaticPaths } from "@/utils/i18n";
+
+export { getStaticPaths };
+const { locale } = Astro.params;
+---
+
+<Layout
+  locale={locale}
+  title="logica / Takuto Nagami"
+  description="Website of logica / Takuto Nagami">
+  <Welcome locale={locale} />
+</Layout>
