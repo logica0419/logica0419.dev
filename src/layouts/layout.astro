@@ -1,44 +1,47 @@
 ---
 import "@/styles/global.css";
+import { type Locales, type Translations, useTranslations } from "@/utils/i18n";
+
+interface Props {
+  locale: Locales;
+  title: Translations;
+  description: Translations;
+  ogp?: string;
+}
+
+const { locale, title, description, ogp } = Astro.props;
+const t = useTranslations(locale);
 ---
 
 <!doctype html>
-<html lang="en" class="m-0 w-full h-full">
+<html lang={locale} class="m-0 w-full h-full">
   <head>
-    <title>logica / Takuto Nagami</title>
-    <link rel="icon" href="/img/favicon.ico" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta
-      name="description"
-      content="Website of logica / Takuto Nagami. Software Engineer | Singer | Composer | Designer"
-    />
+    <link rel="icon" href="/img/favicon.ico" />
     <link rel="alternate" hreflang="en" href="https://logica0419.dev/en" />
     <link rel="alternate" hreflang="ja" href="https://logica0419.dev/ja" />
-    <meta property="og:title" content="logica / Takuto Nagami" />
-    <meta
-      property="og:description"
-      content="Website of logica / Takuto Nagami. Software Engineer | Singer | Composer | Designer"
-    />
-    <meta property="og:url" content="https://logica0419.dev" />
-    <meta property="og:site_name" content="logica / Takuto Nagami" />
+    <title>{t(title)}</title>
+    <meta name="description" content={t(title)} />
+    <meta property="og:title" content={t(title)} />
+    <meta property="og:description" content={t(description)} />
+    <meta property="og:url" content={Astro.request.url} />
+    <meta property="og:site_name" content={t(title)} />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image" content="/img/ogp.png" />
+    <meta property="og:image" content={ogp || "/img/ogp.png"} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="logica / Takuto Nagami" />
-    <meta
-      name="twitter:description"
-      content="Website of logica / Takuto Nagami. Software Engineer | Singer | Composer | Designer"
-    />
+    <meta name="twitter:title" content={t(title)} />
+    <meta name="twitter:description" content={t(description)} />
     <meta name="twitter:image:type" content="image/png" />
     <meta name="twitter:image:width" content="1200" />
     <meta name="twitter:image:height" content="630" />
-    <meta name="twitter:image" content="/img/ogp.png" />
+    <meta name="twitter:image" content={ogp || "/img/ogp.png"} />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="48x48" />
   </head>
+
   <body class="m-0 w-full h-full">
     <slot />
   </body>

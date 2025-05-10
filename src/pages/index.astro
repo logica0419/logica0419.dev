@@ -1,8 +1,17 @@
 ---
-import Welcome from "@/components/welcome.astro";
 import Layout from "@/layouts/layout.astro";
+import { defaultLocale } from "@/utils/i18n";
 ---
 
-<Layout>
-  <Welcome />
-</Layout>
+<Layout
+  locale={defaultLocale}
+  title="logica / Takuto Nagami"
+  description="Website of logica / Takuto Nagami"
+/>
+
+<script>
+  import { detectLocale } from "@/utils/i18n";
+
+  const locale = detectLocale();
+  location.href = `/${locale}/`;
+</script>
