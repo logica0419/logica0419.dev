@@ -38,6 +38,16 @@
           }
         }
       }
+    },
+    {
+      "include": ["*"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
     }
   ]
 }
