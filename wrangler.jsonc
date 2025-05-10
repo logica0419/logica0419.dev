@@ -1,9 +1,8 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "logica0419-dev",
-  // Update to today's date
   "compatibility_date": "2025-04-17",
   "assets": {
-    "directory": "./dist"
-  }
+    "directory": "./dist",
+  },
 }
