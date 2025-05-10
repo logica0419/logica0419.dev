@@ -1,21 +1,22 @@
 ---
+import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import background from "../assets/background.svg";
 import gitHubIcon from "../assets/github.svg";
-import logicaIcon from "../assets/logica.png";
+import logicaIcon from "../assets/icon.webp";
 import xIcon from "../assets/x.png";
 ---
 
 <div class="font-[BISTER] h-full">
-  <img
+  <Picture
+    src={background}
+    alt="background"
     class="fixed top-0 left-0 w-full h-full -z-10 blur-[100px]"
-    src={background.src}
-    alt=""
-    fetchpriority="high"
   />
   <main class="h-full flex justify-center">
     <section class="flex items-center flex-col justify-center">
-      <img
-        src={logicaIcon.src}
+      <Image
+        src={logicaIcon}
         width="100"
         height="100"
         alt="logica Icon"
@@ -27,13 +28,13 @@ import xIcon from "../assets/x.png";
           class="flex items-center px-3 py-2.5 md:px-[10px] md:py-[10px] text-white bg-gradient-to-r from-[#3245ff] to-[#bc52ee] rounded-[10px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12),inset_0_-3px_0_rgba(0,0,0,0.24)] hover:text-[rgb(230,230,230)] hover:shadow-none transition-all"
           href="https://github.com/logica0419"
         >
-          <img src={gitHubIcon.src} width="20" height="20" alt="GitHub" />
+          <Image src={gitHubIcon} width="20" height="20" alt="GitHub" />
         </a>
         <a
           class="flex items-center px-3 py-2.5 md:px-[10px] md:py-[10px] text-white bg-gradient-to-r from-[#3245ff] to-[#bc52ee] rounded-[10px] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.12),inset_0_-3px_0_rgba(0,0,0,0.24)] hover:text-[rgb(230,230,230)] hover:shadow-none transition-all"
           href="https://x.com/logica0419"
         >
-          <img src={xIcon.src} width="20" height="20" alt="X" />
+          <Image src={xIcon} width="20" height="20" alt="X" />
         </a>
       </section>
     </section>
