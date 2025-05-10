@@ -16,7 +16,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.0.0
       - name: Set Mod Cache
         id: mod-cache
         uses: actions/cache@v4.2.3
@@ -25,7 +25,7 @@ jobs:
           key: mod-${{ hashFiles('**/bun.lock') }}
       - name: Setup Bun
         if: steps.mod-cache.outputs.cache-hit != 'true'
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@v2.0.1
         with:
           bun-version: latest
       - name: Module Download
@@ -39,14 +39,14 @@ jobs:
     needs: [mod]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.0.0
       - name: Set Mod Cache
         uses: actions/cache@v4.2.3
         with:
           path: ./node_modules
           key: mod-${{ hashFiles('**/bun.lock') }}
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@v2.0.1
         with:
           bun-version: latest
       - name: Lint
@@ -63,14 +63,14 @@ jobs:
     needs: [mod]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.0.0
       - name: Set Mod Cache
         uses: actions/cache@v4.2.3
         with:
           path: ./node_modules
           key: mod-${{ hashFiles('**/bun.lock') }}
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@v2.0.1
         with:
           bun-version: latest
       - name: Build
