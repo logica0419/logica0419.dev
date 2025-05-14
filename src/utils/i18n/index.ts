@@ -25,6 +25,6 @@ export type Translations = keyof (typeof dictionary)[Locales];
 
 export const useTranslations = (locale: Locales) => {
   return (key: Translations) => {
-    return dictionary[locale][key] || dictionary[defaultLocale][key];
+    return dictionary[locale][key] ?? dictionary[defaultLocale][key];
   };
 };
