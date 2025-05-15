@@ -14,7 +14,7 @@
     "@astrojs/check": "0.9.4",
     "@astrojs/sitemap": "3.4.0",
     "@biomejs/biome": "1.9.4",
-    "@tailwindcss/vite": "4.1.6",
+    "@tailwindcss/vite": "4.1.7",
     "astro": "5.7.13",
     "next-language-detector": "1.1.0",
     "prettier": "3.5.3",
