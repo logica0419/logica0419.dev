@@ -1,16 +1,20 @@
 ---
 import "@/styles/global.css";
-import { type Locales, type Translations, useTranslations } from "@/utils/i18n";
+import { type Locales, useTranslations } from "@/utils/i18n";
 
 interface Props {
   locale: Locales;
-  title: Translations;
-  description: Translations;
+  title?: string;
+  description: string;
   ogp?: string;
 }
 
 const { locale, title, description, ogp } = Astro.props;
 const t = useTranslations(locale);
+
+const convertedTitle = title
+  ? `${title} | ${t("logica / Takuto Nagami")}`
+  : `${t("logica / Takuto Nagami")}`;
 ---
 
 <!doctype html>
@@ -22,19 +26,19 @@ const t = useTranslations(locale);
     <link rel="icon" href="/img/favicon.ico" />
     <link rel="alternate" hreflang="en" href="https://logica0419.dev/en" />
     <link rel="alternate" hreflang="ja" href="https://logica0419.dev/ja" />
-    <title>{t(title)}</title>
-    <meta name="description" content={t(title)} />
-    <meta property="og:title" content={t(title)} />
-    <meta property="og:description" content={t(description)} />
+    <title>{convertedTitle}</title>
+    <meta name="description" content={convertedTitle} />
+    <meta property="og:title" content={convertedTitle} />
+    <meta property="og:description" content={description} />
     <meta property="og:url" content={Astro.request.url} />
-    <meta property="og:site_name" content={t(title)} />
+    <meta property="og:site_name" content={convertedTitle} />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image" content={ogp || "/img/ogp.png"} />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={t(title)} />
-    <meta name="twitter:description" content={t(description)} />
+    <meta name="twitter:title" content={convertedTitle} />
+    <meta name="twitter:description" content={description} />
     <meta name="twitter:image:type" content="image/png" />
     <meta name="twitter:image:width" content="1200" />
     <meta name="twitter:image:height" content="630" />
