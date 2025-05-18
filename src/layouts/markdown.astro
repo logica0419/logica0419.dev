@@ -1,0 +1,23 @@
+---
+import "@/styles/remark-link-card.css";
+import Layout from "@/layouts/base.astro";
+import type { Locales } from "@/utils/i18n";
+
+interface Props {
+  locale: Locales;
+  title: string;
+  description: string;
+  ogp?: string;
+}
+
+const { locale, title, description, ogp } = Astro.props;
+---
+
+<Layout
+  locale={locale}
+  title={title}
+  description={description}
+  ogp={ogp || "/img/ogp.png"}
+>
+  <slot />
+</Layout>
