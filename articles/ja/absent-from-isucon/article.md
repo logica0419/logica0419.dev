@@ -11,7 +11,7 @@ published: true
 さて、大のISUCON好きを公言していた僕ですが、ISUCON12でなんとか決勝に出場させていただいた以来、ISUCONに出場しておりません。
 ISUCON13に関しては大学の編入試験が被ってしまったという仕方ない理由があったのですが、ISUCON14に関しては自分から欠場を決めています。
 
-https://x.com/logica0419/status/1865566531335385407?s=61&t=Ci-brM10NTXpwYInaEOM4Qs
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">僕は最近闘争心が枯れ果ててしまったのか、こういう大会に競技者として出場するためのやる気がなくなってしまいました…<br><br>昔から人と競うみたいなのがそんなに好きじゃなくて「僕は僕で輝けるように」みたいなことを考えて生きて来たから、必然なのかもしれない</p>&mdash; logica / Takuto Nagami (@logica0419) <a href="https://twitter.com/logica0419/status/1865566531335385407?ref_src=twsrc%5Etfw">December 8, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 昨日開催されたISUCON14の様子を見て、僕は上のようなポストをしました。
 このポストを書いている時、「忙しいから…」となんとなく理由づけていたけど、実は今ISUCONへの出場願望がない、ということに初めて気づきました。
@@ -74,7 +74,7 @@ Webインフラへの興味が高じてクラウドプラットフォームの�
 「作る」の面では、ISUCONのためのツールを作ったり、ISUCONの作問者を目指したりと、とにかくインスピレーションのもとになってくれました。
 これは1年半前のISUCON夏祭りで話した通りですね。
 
-https://www.youtube.com/watch?v=rjp1WouNMzM&t=3492
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rjp1WouNMzM?si=psjQAQGMz4ktGlIw&amp;start=3492" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 「目立つ」の面では、良い結果を残すことでエンジニアとしての実力を証明できるというチャンスに燃えていました。残念ながら優勝はできていませんが。
 また、ISUCONは大学のサークル以外でエンジニアのコミュニティに初めて触れた機会だったと思います。
