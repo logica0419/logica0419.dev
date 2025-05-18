@@ -1,16 +1,13 @@
 ---
 import Welcome from "@/components/welcome.astro";
-import Layout from "@/layouts/layout.astro";
-import { getStaticPaths } from "@/utils/i18n";
+import Layout from "@/layouts/base.astro";
+import { getStaticPaths, useTranslations } from "@/utils/i18n";
 
 export { getStaticPaths };
 const { locale } = Astro.params;
+const t = useTranslations(locale);
 ---
 
-<Layout
-  locale={locale}
-  title="logica / Takuto Nagami"
-  description="Website of logica / Takuto Nagami"
->
+<Layout locale={locale} description={t("Website of logica / Takuto Nagami")}>
   <Welcome locale={locale} />
 </Layout>

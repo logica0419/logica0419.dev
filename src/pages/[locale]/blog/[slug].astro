@@ -1,0 +1,40 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import Layout from "@/layouts/markdown.astro";
+import { getStaticPaths as i18nGetStaticPaths } from "@/utils/i18n";
+
+interface Props {
+  post: CollectionEntry<"articles">;
+}
+
+export const getStaticPaths = async () => {
+  const posts = await getCollection("articles");
+
+  return i18nGetStaticPaths().flatMap(({ params }) => {
+    return posts
+      .filter((post) => {
+        return post.filePath?.startsWith(`articles/${params.locale}/`);
+      })
+      .map((post) => ({
+        params: {
+          locale: params.locale,
+          slug: post.filePath?.split("/").at(-2),
+        },
+        props: { post },
+      }));
+  });
+};
+
+const { locale } = Astro.params;
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout
+  locale={locale}
+  title={post.data.title}
+  description="Website of logica / Takuto Nagami"
+>
+  <h1>{post.data.title}</h1>
+  <Content />
+</Layout>
