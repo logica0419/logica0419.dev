@@ -19,3 +19,5 @@ pnpm-debug.log*
 
 # VS Code setting folder
 .vscode/
+
+/public/remark-link-card-plus
