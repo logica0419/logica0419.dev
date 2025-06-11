@@ -15,7 +15,7 @@
     "@astrojs/sitemap": "3.4.1",
     "@biomejs/biome": "1.9.4",
     "@playform/inline": "0.1.2",
-    "@tailwindcss/vite": "4.1.8",
+    "@tailwindcss/vite": "4.1.9",
     "astro": "5.9.2",
     "cssnano": "7.0.7",
     "next-language-detector": "1.1.0",
