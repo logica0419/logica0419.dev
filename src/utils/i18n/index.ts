@@ -1,6 +1,6 @@
-import { dictionary } from "@/utils/i18n/dictionary";
 import type { GetStaticPaths } from "astro";
 import languageDetector from "next-language-detector";
+import { dictionary } from "@/utils/i18n/dictionary";
 
 export const defaultLocale = "en";
 
