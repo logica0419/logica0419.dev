@@ -16,7 +16,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v5.0.0
       - name: Set Mod Cache
         id: mod-cache
         uses: actions/cache@v4.2.4
@@ -39,7 +39,7 @@ jobs:
     needs: [mod]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v5.0.0
       - name: Set Mod Cache
         uses: actions/cache@v4.2.4
         with:
@@ -63,7 +63,7 @@ jobs:
     needs: [mod]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v5.0.0
       - name: Set Mod Cache
         uses: actions/cache@v4.2.4
         with:
