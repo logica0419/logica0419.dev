@@ -4,6 +4,7 @@
   "scripts": {
     "lint": "biome lint --write src",
     "format": "biome check --linter-enabled=false --write . && prettier --write src",
+    "migrate": "biome migrate --write",
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
