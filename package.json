@@ -4,6 +4,7 @@
   "scripts": {
     "lint": "biome lint --write src",
     "format": "biome check --linter-enabled=false --write . && prettier --write src",
+    "migrate": "biome migrate --write",
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
@@ -13,7 +14,7 @@
   "devDependencies": {
     "@astrojs/check": "0.9.4",
     "@astrojs/sitemap": "3.5.0",
-    "@biomejs/biome": "2.1.4",
+    "@biomejs/biome": "2.2.0",
     "@playform/inline": "0.1.2",
     "@tailwindcss/vite": "4.1.12",
     "astro": "5.13.2",
