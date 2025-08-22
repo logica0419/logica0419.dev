@@ -18,7 +18,7 @@
     "@playform/inline": "0.1.2",
     "@tailwindcss/vite": "4.1.12",
     "astro": "5.13.3",
-    "cssnano": "7.1.0",
+    "cssnano": "7.1.1",
     "next-language-detector": "1.1.0",
     "prettier": "3.6.2",
     "prettier-plugin-astro": "0.14.1",
