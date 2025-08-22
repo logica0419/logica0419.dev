@@ -13,11 +13,11 @@
   "type": "module",
   "devDependencies": {
     "@astrojs/check": "0.9.4",
-    "@astrojs/sitemap": "3.5.0",
+    "@astrojs/sitemap": "3.5.1",
     "@biomejs/biome": "2.2.0",
     "@playform/inline": "0.1.2",
     "@tailwindcss/vite": "4.1.12",
-    "astro": "5.13.2",
+    "astro": "5.13.3",
     "cssnano": "7.1.0",
     "next-language-detector": "1.1.0",
     "prettier": "3.6.2",
