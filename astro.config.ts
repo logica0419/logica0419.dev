@@ -8,6 +8,7 @@ export default defineConfig({
   site: "https://logica0419.dev",
   integrations: [sitemap(), playformInline()],
   vite: {
+    // @ts-expect-error https://github.com/withastro/astro/issues/14030
     plugins: [tailwindcss()],
   },
   markdown: {
