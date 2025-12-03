@@ -20,7 +20,7 @@
     "astro": "5.16.3",
     "cssnano": "7.1.2",
     "next-language-detector": "1.1.1",
-    "prettier": "3.7.3",
+    "prettier": "3.7.4",
     "prettier-plugin-astro": "0.14.1",
     "remark-link-card-plus": "0.7.2"
   }
