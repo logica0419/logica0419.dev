@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v6.0.1
       - name: Set Mod Cache
         id: mod-cache
-        uses: actions/cache@v5.0.1
+        uses: actions/cache@v5.0.2
         with:
           path: ./node_modules
           key: mod-${{ hashFiles('**/bun.lock') }}
@@ -41,7 +41,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6.0.1
       - name: Set Mod Cache
-        uses: actions/cache@v5.0.1
+        uses: actions/cache@v5.0.2
         with:
           path: ./node_modules
           key: mod-${{ hashFiles('**/bun.lock') }}
@@ -65,7 +65,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6.0.1
       - name: Set Mod Cache
-        uses: actions/cache@v5.0.1
+        uses: actions/cache@v5.0.2
         with:
           path: ./node_modules
           key: mod-${{ hashFiles('**/bun.lock') }}
