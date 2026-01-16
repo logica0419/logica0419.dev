@@ -25,7 +25,7 @@ jobs:
           key: mod-${{ hashFiles('**/bun.lock') }}
       - name: Setup Bun
         if: steps.mod-cache.outputs.cache-hit != 'true'
-        uses: oven-sh/setup-bun@v2.1.0
+        uses: oven-sh/setup-bun@v2.1.1
         with:
           bun-version: latest
       - name: Module Download
@@ -46,7 +46,7 @@ jobs:
           path: ./node_modules
           key: mod-${{ hashFiles('**/bun.lock') }}
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v2.1.0
+        uses: oven-sh/setup-bun@v2.1.1
         with:
           bun-version: latest
       - name: Lint
@@ -70,7 +70,7 @@ jobs:
           path: ./node_modules
           key: mod-${{ hashFiles('**/bun.lock') }}
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v2.1.0
+        uses: oven-sh/setup-bun@v2.1.1
         with:
           bun-version: latest
       - name: Build
