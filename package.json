@@ -22,6 +22,6 @@
     "next-language-detector": "1.1.1",
     "prettier": "3.8.0",
     "prettier-plugin-astro": "0.14.1",
-    "remark-link-card-plus": "0.7.2"
+    "remark-link-card-plus": "0.7.3"
   }
 }
