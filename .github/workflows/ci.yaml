@@ -41,6 +41,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6.0.2
       - name: Set Mod Cache
+        id: mod-cache
         uses: actions/cache@v5.0.2
         with:
           path: ./node_modules
@@ -49,6 +50,9 @@ jobs:
         uses: oven-sh/setup-bun@v2.1.2
         with:
           bun-version: latest
+      - name: Module Download
+        if: steps.mod-cache.outputs.cache-hit != 'true'
+        run: bun install
       - name: Lint
         run: bun run lint
       - name: Format
@@ -65,6 +69,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6.0.2
       - name: Set Mod Cache
+        id: mod-cache
         uses: actions/cache@v5.0.2
         with:
           path: ./node_modules
@@ -73,5 +78,8 @@ jobs:
         uses: oven-sh/setup-bun@v2.1.2
         with:
           bun-version: latest
+      - name: Module Download
+        if: steps.mod-cache.outputs.cache-hit != 'true'
+        run: bun install
       - name: Build
         run: bun run build
