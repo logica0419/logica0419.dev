@@ -17,7 +17,7 @@
     "@biomejs/biome": "2.4.4",
     "@playform/inline": "0.1.2",
     "@tailwindcss/vite": "4.2.1",
-    "astro": "5.17.3",
+    "astro": "5.18.0",
     "cssnano": "7.1.2",
     "next-language-detector": "1.1.1",
     "prettier": "3.8.1",
