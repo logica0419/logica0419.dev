@@ -48,7 +48,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: "lts/*"
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2.2.0
         with:
@@ -76,7 +76,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          node-version: "lts/*"
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2.2.0
         with:
