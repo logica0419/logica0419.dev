@@ -10,7 +10,9 @@
   border-radius: 0.75rem;
   background-color: #ffffff;
   text-decoration: none !important;
-  transition: background-color 150ms ease, border-color 150ms ease;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease;
 }
 
 .remark-link-card-plus__card:hover {
