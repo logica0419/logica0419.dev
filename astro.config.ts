@@ -8,7 +8,7 @@ export default defineConfig({
   site: "https://logica0419.dev",
   integrations: [sitemap(), playformInline()],
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [...tailwindcss()],
   },
   markdown: {
     shikiConfig: {
