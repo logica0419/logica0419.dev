@@ -45,6 +45,10 @@ jobs:
         with:
           path: ./node_modules
           key: mod-${{ hashFiles('**/bun.lock') }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2.2.0
         with:
@@ -69,6 +73,10 @@ jobs:
         with:
           path: ./node_modules
           key: mod-${{ hashFiles('**/bun.lock') }}
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2.2.0
         with:
