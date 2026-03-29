@@ -1,5 +1,4 @@
 ---
-import "@/styles/global.css";
 import { type Locales, useTranslations } from "@/utils/i18n";
 
 interface Props {
@@ -18,7 +17,7 @@ const convertedTitle = title
 ---
 
 <!doctype html>
-<html lang={locale} class="m-0 w-full h-full">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -44,9 +43,37 @@ const convertedTitle = title
     <meta name="twitter:image:height" content="630" />
     <meta name="twitter:image" content={ogp || "/img/ogp.png"} />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="48x48" />
+    <style>
+      @font-face {
+        font-family: "BIZTER";
+        src: url("/font/BIZTER-Regular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "Cica";
+        src: url("/font/Cica-Regular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      :global(html),
+      :global(body) {
+        margin: 0;
+        width: 100%;
+        min-height: 100%;
+      }
+
+      :global(html) {
+        font-family: "BIZTER", sans-serif;
+      }
+    </style>
   </head>
 
-  <body class="m-0 w-full h-full">
+  <body>
     <slot />
   </body>
 </html>
