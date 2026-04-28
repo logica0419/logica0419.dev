@@ -12,11 +12,11 @@
   },
   "type": "module",
   "devDependencies": {
-    "@astrojs/check": "0.9.8",
+    "@astrojs/check": "0.9.9",
     "@astrojs/sitemap": "3.7.2",
     "@biomejs/biome": "2.4.6",
     "@playform/inline": "0.1.4",
-    "astro": "6.1.9",
+    "astro": "6.1.10",
     "cssnano": "7.1.7",
     "next-language-detector": "1.1.1",
     "prettier": "3.8.3",
