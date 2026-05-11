@@ -15,7 +15,12 @@ const t = useTranslations(locale);
 ---
 
 <div class="welcome-root">
-  <img src={background.src} alt="background" class="welcome-background" />
+  <img
+    src={background.src}
+    alt=""
+    aria-hidden="true"
+    class="welcome-background"
+  />
   <main class="welcome-main">
     <section class="welcome-content">
       <Image
