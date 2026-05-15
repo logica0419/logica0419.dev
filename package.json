@@ -14,7 +14,7 @@
   "devDependencies": {
     "@astrojs/check": "0.9.9",
     "@astrojs/sitemap": "3.7.2",
-    "@biomejs/biome": "2.4.6",
+    "@biomejs/biome": "2.4.15",
     "@playform/inline": "0.1.4",
     "astro": "6.3.3",
     "cssnano": "8.0.1",
