@@ -12,7 +12,7 @@
         "astro": "6.4.8",
         "cssnano": "9.5.0",
         "next-language-detector": "1.1.1",
-        "prettier": "3.9.9",
+        "prettier": "3.9.10",
         "prettier-plugin-astro": "1.1.1",
         "remark-link-card-plus": "0.8.1",
       },
@@ -837,7 +837,7 @@
 
     "postcss-unique-selectors": ["postcss-unique-selectors@9.0.6", "", { "dependencies": { "@csstools/css-tokenizer": "^4.0.2" }, "peerDependencies": { "postcss": "^8.5.29" } }, "sha512-mhXCmLZbqDtzM2JbtjGP36555/aob2fbOXSW8cP0SiNtssVSKB8aG7EbiAhVZKV/toJLqKJm1ayWArvzc5+huA=="],
 
-    "prettier": ["prettier@3.9.9", "", { "bin": { "prettier": "bin/prettier.cjs" } }, "sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg=="],
+    "prettier": ["prettier@3.9.10", "", { "bin": { "prettier": "bin/prettier.cjs" } }, "sha512-skGHTH1Yb9QvaTC4hWnRTzEYtCpApF0UMBPz+t/0ZPzP8ihefo/btKd+QA7pUE0fEwA1SbS/NmhyEcstdXOIdA=="],
 
     "prettier-plugin-astro": ["prettier-plugin-astro@1.1.1", "", { "dependencies": { "@astrojs/compiler-rs": "^0.4.0", "@prettier/parse-srcset": "^3.1.0", "sass-formatter": "^0.8.0" }, "peerDependencies": { "prettier": "^3.5.3" } }, "sha512-ykymNFOinCFXY4z4yF0978GgAvg6GRtrzCYg3+R1Nv/dndACwuEsSrUpHkJohER9FiwYMPKuYT38FbjCLmwu9A=="],
 
